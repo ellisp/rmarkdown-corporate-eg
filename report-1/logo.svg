@@ -21,6 +21,30 @@
      id="defs4">
     <linearGradient
        inkscape:collect="always"
+       id="linearGradient5771">
+      <stop
+         style="stop-color:#616161;stop-opacity:1;"
+         offset="0"
+         id="stop5773" />
+      <stop
+         style="stop-color:#616161;stop-opacity:0;"
+         offset="1"
+         id="stop5775" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5723">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5725" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop5727" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
        id="linearGradient5703">
       <stop
          style="stop-color:#550000;stop-opacity:1;"
@@ -33,7 +57,7 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       id="linearGradient4244">
+       id="5000">
       <stop
          style="stop-color:#d38d5f;stop-opacity:1;"
          offset="0"
@@ -45,14 +69,14 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4244"
+       xlink:href="#5000"
        id="linearGradient4250"
        x1="8.3789062"
        y1="1003.6833"
        x2="130.48828"
        y2="1003.6833"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.6894974,0,0,1.6894974,-5.7772339,-705.87359)" />
+       gradientTransform="matrix(1.6894974,0,0,1.6894974,-6.1343769,-705.87359)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient5703"
@@ -76,6 +100,39 @@
          stdDeviation="0.69462891"
          id="feGaussianBlur5717" />
     </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5723"
+       id="radialGradient5729"
+       cx="111.96428"
+       cy="1000.755"
+       fx="111.96428"
+       fy="1000.755"
+       r="109.10714"
+       gradientTransform="matrix(1,0,0,0.43371525,0,566.71231)"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5767"
+       x="-0.043011457"
+       width="1.0860229"
+       y="-0.099169807"
+       height="1.1983396">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.9107142"
+         id="feGaussianBlur5769" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5771"
+       id="linearGradient5777"
+       x1="8.0217626"
+       y1="989.84681"
+       x2="214.32523"
+       y2="989.84681"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -85,7 +142,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="14.203261"
+     inkscape:cx="35.631833"
      inkscape:cy="25.977956"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -113,6 +170,13 @@
      id="layer1"
      transform="translate(0,-949.60629)">
     <rect
+       style="opacity:0.579;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:url(#radialGradient5729);stroke-width:1.20000005;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter5767)"
+       id="rect5721"
+       width="218.21428"
+       height="94.64286"
+       x="2.8571429"
+       y="953.43359" />
+    <rect
        style="opacity:0.869;fill:#ffeeaa;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.20000041;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect5719"
        width="211.91386"
@@ -122,19 +186,19 @@
        transform="matrix(0.94990864,0.31252773,-0.35935077,0.93320256,0,0)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:67.57989502px;line-height:125%;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.869;fill:url(#linearGradient4250);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="4.782124"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:67.57989502px;line-height:125%;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.869;fill:url(#linearGradient4250);fill-opacity:1;stroke:#616161;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="4.4249811"
        y="1004.8114"
        id="text4136"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4138"
-         x="4.782124"
+         x="4.4249811"
          y="1004.8114"
-         style="fill:url(#linearGradient4250);fill-opacity:1">corporate</tspan></text>
+         style="fill:url(#linearGradient4250);fill-opacity:1;stroke:#616161;stroke-opacity:1;">corporate</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient5709);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5715)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient5709);fill-opacity:1;fill-rule:nonzero;stroke:#616161;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5715);"
        x="19.464283"
        y="1042.2194"
        id="text4140"
@@ -144,6 +208,6 @@
          id="tspan4142"
          x="19.464283"
          y="1042.2194"
-         style="fill:url(#linearGradient5709);fill-opacity:1;fill-rule:nonzero">LOGO</tspan></text>
+         style="fill:url(#linearGradient5709);fill-opacity:1;fill-rule:nonzero;stroke:#616161;stroke-opacity:1;">LOGO</tspan></text>
   </g>
 </svg>
