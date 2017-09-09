@@ -33,6 +33,7 @@ vignettes/*.pdf
 *.knit.md
 .Rproj.user
 
-
-
+# data files and built version of reports (we only want to control source code)
+*.rda
 *.xlsx
+*.html
