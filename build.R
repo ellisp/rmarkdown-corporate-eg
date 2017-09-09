@@ -3,6 +3,8 @@
 # Peter Ellis 6 September 2017
 
 library(rmarkdown)
+library(ggplot2)
+library(scales)
 library(openxlsx)
 library(tidyverse)
 library(stringr)

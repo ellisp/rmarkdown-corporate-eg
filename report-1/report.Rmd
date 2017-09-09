@@ -29,7 +29,7 @@ cat(stri_rand_lipsum(1))
 
 # Purpose
 
-This is basically just a demo of how to deal with a few issues with making R Markdown files comply with corporate styling - fonts, logo, heading sizes and colours, etc.  The [source code of the mini-project that builds this file is on GitHub](https://github.com/ellisp/rmarkdown-corporate-eg).
+This is basically just a demo of how to deal with a few issues with making R Markdown files comply with corporate styling - fonts, logo, heading sizes and colours, etc.  The [source code of the mini-project that builds this file is on GitHub](https://github.com/ellisp/rmarkdown-corporate-eg).  There is also an accompanying [blog post](http://ellisp.github.io/blog/2017/09/09/rmarkdown) on Peter's Stats Stuff.
 
 The features include:
 

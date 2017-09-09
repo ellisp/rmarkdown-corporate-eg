@@ -1,5 +1,5 @@
-library(ggplot2)
-library(scales)
+# ./R/corp-palette.R
+# Defines font and a hypothetical corporate palette, and makes them ggplot2 defaults
 
 corp_font <- "Calibri"
 
