@@ -44,7 +44,13 @@ We see a very strong seasonal pattern, and also that people spend a lot on accom
 
 ```{r}
 p <- mrtes %>%
+  # make products friendly with line wraps for the facet titles:
   mutate(Product = str_wrap(Product, 20)) %>%
+  # add up all the "others""
+  group_by(Date, Product, rto_lumped) %>%
+  summarise(Spend = sum(Spend)) %>%
+  ungroup() %>%
+  mutate(rto_lumped = fct_reorder(rto_lumped, -Spend)) %>%
   ggplot(aes(x = Date, y = Spend, colour = rto_lumped)) +
   facet_wrap(~Product, scales = "free_y") +
   theme(legend.position = c(0.9, 0.1)) +

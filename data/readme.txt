@@ -1,0 +1,1 @@
+holds both original data (eg .xlsx) and persistent versions of R data (.rda).  But these are ignored by Git, this is just for your local clone.
