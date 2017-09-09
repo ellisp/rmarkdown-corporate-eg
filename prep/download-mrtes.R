@@ -1,5 +1,12 @@
+# downloads some Monthly Regional Tourism Estimates data from MBIE
+# Peter Ellis, 9 September 2017
+
 url <- "http://www.mbie.govt.nz/info-services/sectors-industries/tourism/tourism-research-data/monthly-regional-tourism-estimates/document-image-library/international-product-by-rto.xlsx"
-download.file(url, destfile = "mrtes.xlsx", mode = "wb")
+
+# Only download the file if we haven't already done it as I don't want to cause unnecessary network traffic
+if(!file.exists("mrtes.xlsx")){
+  download.file(url, destfile = "mrtes.xlsx", mode = "wb")
+}
 
 mrtes_orig <- read.xlsx("mrtes.xlsx", sheet = "Data base", detectDates = TRUE)
 

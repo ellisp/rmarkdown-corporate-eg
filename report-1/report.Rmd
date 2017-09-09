@@ -17,8 +17,6 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, cache = FALSE, eval = TRUE)
-source("corp-palette.R")
-load(paste0(proj_dir, "/data/mrtes.rda"))
 ```
 
 # Executive Summary
