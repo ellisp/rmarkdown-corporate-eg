@@ -1,11 +1,14 @@
+# This file downloads and munges data and builds the report/s for the project from scratch
+# Peter Ellis 6 September 2017
+
 library(rmarkdown)
 library(openxlsx)
 library(tidyverse)
 library(stringr)
-library(ggseas)
-library(forcats)
+library(ggseas)    # for seasonal adjustment on the fly
+library(forcats)   # for munging factors
 library(extrafont) # in case running on windows
-library(stringi) # for generating pseudo lating lorem ipsum text
+library(stringi)   # for generating pseudo lating lorem ipsum text
 
 # Run all the files in the "R" folder, which create project assets
 # like the corporate colours and the function we use to build documents.
