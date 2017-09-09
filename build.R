@@ -20,5 +20,6 @@ source("prep/download-mrtes.R")
 # load in the data (not really necessary)
 load("data/mrtes.rda")
 
+# buidl the report.  Note that the build will happen in the user's home directory (~).
 build_doc(subdir = "report-1")
 
