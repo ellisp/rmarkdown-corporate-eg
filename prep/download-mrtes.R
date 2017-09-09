@@ -10,7 +10,7 @@ if(!file.exists("data/mrtes.xlsx")){
 
 mrtes_orig <- read.xlsx("data/mrtes.xlsx", sheet = "Data base", detectDates = TRUE)
 
-# make some alternative names for the Regional Tourism Organisations, more grpahic friendly,
+# make some alternative names for the Regional Tourism Organisations, more graphic friendly,
 # including one that is just the 5 big ones plus "Other":
 mrtes <- mrtes_orig %>%
   mutate(rto_short = gsub(" RTO", "", RTO),

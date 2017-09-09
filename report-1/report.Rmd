@@ -14,6 +14,7 @@ output:
 ---
 
 <img src="logo.svg" style="position:absolute;top:0px;right:0px;" />
+<div class="watermark">DRAFT</div>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, cache = FALSE, eval = TRUE)
