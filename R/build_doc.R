@@ -5,6 +5,8 @@
 #' R Markdown doesn't build nicely on RStudio Server on a mapped network drive due to a bug in Pandoc, so
 #' sometimes you need to move everything to somewhere else.
 #' 
+#' @export
+#' @import rmarkdown
 #' @param subdir sub directory (relative to the project directory) holding a report and its necessary files
 #' @param report_name name of the report, excluding the .Rmd suffix.
 #' @param ... other arguments to be passed to rmarkdown::render()
@@ -19,7 +21,7 @@ build_doc <- function(subdir = "report", report_name = "report", ...){
   
   # go to the home directory and render the report
   setwd("~")
-  render(paste0(report_name, ".Rmd"), ...)  
+  rmarkdown::render(paste0(report_name, ".Rmd"), ...)  
   
   # copy the built version of the document back to the project:
   file.copy(paste0(report_name, ".html"), 

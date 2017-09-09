@@ -1,7 +1,7 @@
 ---
 title: "Demonstration page of R Markdown in combination with corporate theming"
-author: "Flash Gordon, economist extraordinaire"
-date: "6 September 2017"
+author: "Flash Gordon, consultant economist"
+date: "9 September 2017"
 output: 
   html_document:
     toc: true
@@ -28,7 +28,14 @@ cat(stri_rand_lipsum(1))
 
 # Purpose
 
-This is basically just a demo of how to deal with a few issues with making R Markdown files comply with corporate styling.  The [source code of the mini-project that builds this file is on GitHub](https://github.com/ellisp/rmarkdown-corporate-eg).
+This is basically just a demo of how to deal with a few issues with making R Markdown files comply with corporate styling - fonts, logo, heading sizes and colours, etc.  The [source code of the mini-project that builds this file is on GitHub](https://github.com/ellisp/rmarkdown-corporate-eg).
+
+The features include:
+
+* logo in the top right of the document, and modify the title's width to allow for it
+* heading styles and fonts in the html
+* fonts and corporate colours used in the graphics
+* document builds successfully even if the project is on a mapped network drive which usually causes problems with RStudio Server and Pandoc
 
 # Analysis
 
@@ -62,7 +69,7 @@ p + geom_line() + labs(y = "Spend ($m)")
 
 ### Seasonally adjusted
 
-Some of the pattern is obscured by the strongly seasonal element.  There are more tourists in summer than winter in New Zealand.  We can use statistical methods to adjust for the seasonality and focus more on the trend:
+Some of the pattern is obscured by the strongly seasonal element.  There are more tourists in summer than winter in New Zealand.  We can use statistical methods to adjust for the seasonality and focus more on the trend.  NOte the big spike in food and beverage sales in Auckland in particular at the time of the 2011 Rugby World Cup.  Also not challenges with seasonal adjustment of accommodation spend in Auckland.  We could consider using more sophisticated methods to understand what is going on here.
 
 
 ```{r}
@@ -72,9 +79,9 @@ p +   stat_stl(frequency = 12, s.window = 7) +
 ```
 
 
-### food and bev versus accommodation
+### Food and Bev versus accommodation
 
-We some interesting patterns if we compare the percentage of total tourism spend on accommodation compared to food and beverage.  The sking location of Ruapehu stands out as having much more spend on accommodation and relatively little on food and beverage.  However, this may reflect the data collection process - if food and beverages are purchased from tourist's hotels, it will show up as accommodation:
+We get some interesting patterns if we compare the percentage of total tourism spend on accommodation compared to food and beverage.  The sking location of Ruapehu stands out as having much more spend on accommodation and relatively little on food and beverage.  However, this may reflect the data collection process - if food and beverages are purchased from tourist's hotels, it will show up as accommodation:
 
 ```{r}
 mrtes %>%
