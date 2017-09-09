@@ -1,0 +1,90 @@
+---
+title: "Demonstration page of R Markdown in combination with corporate theming"
+author: "Flash Gordon, economist extraordinaire"
+date: "6 September 2017"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    self_contained: yes
+    css: corp-styles.css
+    highlight: pygments
+---
+
+<img src="logo.svg" style="position:absolute;top:0px;right:0px;" />
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache = FALSE, eval = TRUE)
+source("corp-palette.R")
+load(paste0(proj_dir, "/data/mrtes.rda"))
+```
+
+# Executive Summary
+
+```{r results = 'asis'}
+cat(stri_rand_lipsum(1))
+```
+
+
+# Purpose
+
+This is basically just a demo of how to deal with a few issues with making R Markdown files comply with corporate styling.  The [source code of the mini-project that builds this file is on GitHub](https://github.com/ellisp/rmarkdown-corporate-eg).
+
+# Analysis
+
+## Data
+
+We found this data from [MBIE's website](http://www.mbie.govt.nz/info-services/sectors-industries/tourism/tourism-research-data/monthly-regional-tourism-estimates/data-download).  MBIE is the Ministry of Business, Innovation and Employment.  This dataset represents estimated spend per month by tourists, broken down by product and country of origin.
+
+## Findings
+
+### Raw data
+
+We see a very strong seasonal pattern, and also that people spend a lot on accommodation, food and beverage, and retail.
+
+```{r}
+p <- mrtes %>%
+  mutate(Product = str_wrap(Product, 20)) %>%
+  ggplot(aes(x = Date, y = Spend, colour = rto_lumped)) +
+  facet_wrap(~Product, scales = "free_y") +
+  theme(legend.position = c(0.9, 0.1)) +
+  labs(x = "", colour = "")
+
+p + geom_line() + labs(y = "Spend ($m)")
+```
+
+
+### Seasonally adjusted
+
+Some of the pattern is obscured by the strongly seasonal element.  There are more tourists in summer than winter in New Zealand.  We can use statistical methods to adjust for the seasonality and focus more on the trend:
+
+
+```{r}
+p +   stat_stl(frequency = 12, s.window = 7) +
+  labs(y = "Seasonall adjusted spend ($m)")
+
+```
+
+
+### food and bev versus accommodation
+
+We some interesting patterns if we compare the percentage of total tourism spend on accommodation compared to food and beverage.  The sking location of Ruapehu stands out as having much more spend on accommodation and relatively little on food and beverage.  However, this may reflect the data collection process - if food and beverages are purchased from tourist's hotels, it will show up as accommodation:
+
+```{r}
+mrtes %>%
+  group_by(rto_short, Product) %>%
+  summarise(total_spend = sum(Spend)) %>%
+  group_by(rto_short) %>%
+  mutate(prop_spend = total_spend / sum(total_spend)) %>%
+  filter(Product %in% c("Accommodation services", "Food and beverage serving services")) %>%
+  select(-total_spend) %>%
+  spread(Product, prop_spend) %>%
+  ggplot(aes(x = `Accommodation services`, y = `Food and beverage serving services`,
+                    label = rto_short)) +
+  geom_text() +
+  scale_x_continuous(label = percent) +
+  scale_y_continuous(label = percent)
+
+```
