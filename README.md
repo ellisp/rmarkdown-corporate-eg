@@ -10,6 +10,6 @@ Example folder system for an analytical project and corporately-styled RMarkdown
 
 Check out:
 
-- the [built version](http://ellisp.github.io/misc/rmarkdown-styled-demo.html) 
+- the [built version](http://ellisp.github.io/presentations/rmarkdown-styled-demo.html) 
 - accompanying [blog post](http://ellisp.github.io/blog/2017/09/09/rmarkdown) on Peter's Stats Stuff
 
